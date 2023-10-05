@@ -20,6 +20,6 @@ public class Address {
     private String country;
 
     @ManyToOne
-    private User user;
+    private Users user;
 
 }

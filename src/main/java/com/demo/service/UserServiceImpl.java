@@ -1,6 +1,7 @@
 package com.demo.service;
 
-import com.demo.entity.User;
+
+import com.demo.entity.Users;
 import com.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,7 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public Long addUser(User user) {
+    public Long addUser(Users user) {
         return userRepository.save(user).getUserId();
     }
 
@@ -29,17 +30,17 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User editUser(User user) {
+    public Users editUser(Users user) {
         return userRepository.save(user);
     }
 
     @Override
-    public List<User> getAllUsers() {
+    public List<Users> getAllUsers() {
         return userRepository.findAll();
     }
 
     @Override
-    public User getUser(Long userId) {
+    public Users getUser(Long userId) {
         return userRepository.findById(userId).get();
     }
 
