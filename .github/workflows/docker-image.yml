@@ -21,7 +21,7 @@ jobs:
         run: mvn clean install
 
       - name: Publish to Docker Hub
-        uses: docker/build-push-action@v3
+        uses: mr-smithers-excellent/docker-build-push@v6
         with:
           image: makeshb/azuretest
           registry: docker.io
