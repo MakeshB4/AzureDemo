@@ -11,7 +11,7 @@ import java.util.Date;
 @Setter
 @AllArgsConstructor
 public class ErrorDetails {
-
+// Comments
     private Date timestamp;
     private String message;
 
