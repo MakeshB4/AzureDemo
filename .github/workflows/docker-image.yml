@@ -22,7 +22,7 @@ jobs:
       - name: Publish to Docker Hub
         uses: docker/build-push-action@v3
         with:
+          image: makeshb/azuretest
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: makeshb/azuretest
           tags: ${{github.run_number}}
