@@ -1,5 +1,5 @@
 FROM openjdk:17-jdk-slim-buster
 MAINTAINER makeshb.com
 EXPOSE 8080
-COPY target/AzureDemo.jar AzureDemo.jar
-ENTRYPOINT ["java","-jar","/AzureDemo.jar"]
+COPY target/azuretest.jar azuretest.jar
+ENTRYPOINT ["java","-jar","/azuretest.jar"]
