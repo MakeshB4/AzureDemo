@@ -1,6 +1,7 @@
 package com.demo.controller;
 
-import com.demo.entity.User;
+
+import com.demo.entity.Users;
 import com.demo.service.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -25,21 +26,21 @@ public class UserController {
     }
 
     @PostMapping("/addUser")
-    public Long addUser(@RequestBody User user) {
+    public Long addUser(@RequestBody Users user) {
         LOGGER.info("In  add User {}", user);
         return userService.addUser(user);
     }
 
     @GetMapping("/getUserById/{id}")
-    public User getUserDetails(@PathVariable Long id) {
+    public Users getUserDetails(@PathVariable Long id) {
         LOGGER.info("In  getUserDetails {}", id);
         return userService.getUser(id);
     }
 
     @PutMapping("/editUserDetails/{id}")
-    public User editUserDetails(@PathVariable(value = "id") Long userId, @RequestBody User user) {
+    public Users editUserDetails(@PathVariable(value = "id") Long userId, @RequestBody Users user) {
         LOGGER.info("In  editUserDetails for id  {} and user Details {}", userId, user);
-        User userDetails = userService.getUser(userId);
+        Users userDetails = userService.getUser(userId);
         userDetails.setAge(user.getAge());
         userDetails.setAddress(user.getAddress());
         userDetails.setEmailId(user.getEmailId());
@@ -55,7 +56,7 @@ public class UserController {
     }
 
     @GetMapping("/getAllUsers")
-    public List<User> getUsersAll() {
+    public List<Users> getUsersAll() {
         LOGGER.info("In getUsersAll {}");
         return userService.getAllUsers();
     }

@@ -1,19 +1,20 @@
 package com.demo.service;
 
 
-import com.demo.entity.User;
+
+import com.demo.entity.Users;
 
 import java.util.List;
 
 public interface UserService {
-    Long addUser(User user);
+    Long addUser(Users user);
 
-    User getUser(Long userId);
+    Users getUser(Long userId);
 
     void deleteUser(Long userId);
 
-    User editUser(User user);
+    Users editUser(Users user);
 
-    List<User> getAllUsers();
+    List<Users> getAllUsers();
 
 }
