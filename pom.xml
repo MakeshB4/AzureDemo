@@ -50,7 +50,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
-		<finalName>azuretest</finalName>
+		<finalName>AzureDemo</finalName>
 	</build>
 
 </project>

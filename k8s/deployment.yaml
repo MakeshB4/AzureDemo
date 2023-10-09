@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: azuredemo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: azuredemo
+  template:
+    metadata:
+      labels:
+        app: azuredemo
+    spec:
+      containers:
+      - name: azuredemo
+        image: azuredemo:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8082
