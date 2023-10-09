@@ -10,6 +10,8 @@ class AzureDemoApplicationTests {
   //Adding for Commit
 	@Test
 	void contextLoads() {
+
+		//sout
 	}
 
 }
